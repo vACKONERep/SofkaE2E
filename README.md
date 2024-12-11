@@ -1,6 +1,6 @@
 # E2E Testing with Serenity BDD
 
-This project contains End-to-End (E2E) tests for [Your Project Name] using Serenity BDD and Gradle. The tests verify the behavior of the application by simulating user interactions and ensuring that the expected outcomes are met.
+This project contains End-to-End (E2E) tests for Sofka Challenge using Serenity BDD and Gradle. The tests verify the behavior of the application by simulating user interactions and ensuring that the expected outcomes are met.
 
 ## Prerequisites
 
