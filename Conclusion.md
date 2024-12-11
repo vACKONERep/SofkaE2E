@@ -15,7 +15,7 @@ En este ejercicio se implementó una prueba funcional automatizada de un flujo d
   
 - **Uso de Serenity BDD**: El uso de Serenity BDD proporcionó una estructura clara para la automatización de las pruebas, con la ventaja de generar informes detallados sobre la ejecución de los tests y la visualización de los pasos del escenario.
 - ![Test Report](https://github.com/vACKONERep/SofkaE2E/blob/master/brave_xjI7YrC654.png)
-- ![Test Report]([https://github.com/vACKONERep/SofkaE2E/blob/master/brave_xjI7YrC654.png](https://github.com/vACKONERep/SofkaE2E/blob/master/brave_Mxqu1wYIwS.png))
+- ![Test Report](https://github.com/vACKONERep/SofkaE2E/blob/master/brave_Mxqu1wYIwS.png)
   
 - **Interacción con Elementos Dinámicos**: El sitio web de DemoBlaze utiliza elementos dinámicos que requieren una espera adecuada para asegurar que los elementos estén cargados antes de interactuar con ellos. Serenity BDD facilitó la implementación de esperas implícitas para garantizar que la prueba fuera confiable.
 
