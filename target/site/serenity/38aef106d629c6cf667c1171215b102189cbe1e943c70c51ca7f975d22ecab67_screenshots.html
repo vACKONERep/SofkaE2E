@@ -1,0 +1,315 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="bootstrap-icons/bootstrap-icons.css">
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.13.1/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.13.1/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.13.1/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+<!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">Serenity BDD Report</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="6c298de9fd84c1bdb06d2cda0e795936c81cfae06a558d5b91e18eae94915cec.html">End-To-End Purchase Flow</a></span>
+                > <span class="truncate-60"><a
+                    href="38aef106d629c6cf667c1171215b102189cbe1e943c70c51ca7f975d22ecab67.html">Purchase two items from Demoblaze </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 10-12-2024 18:57</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
+                                    <span class="story-header-title">End-To-End Purchase Flow </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                As a user of Demoblaze<br />
+I want to automate a purchase flow<br />
+So that I can verify the application's functionality
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="c4962ebb4213b4e3043b9efe0aff60a9bf5c89a8dc7c5e10ee62cf01c2d98fa0.html">Happy Path
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="4b59ae6653aebba42755603f63edcc610e447dca4c5d6938ccdf5fe39dc86cdd.html">Microsoftedge
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="f55cf301e8f51d63aebeb8bc8dbe880df940586e2a502c7a3e24c2b639523f8f.html">Windows
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="0bdb81a5de601afc0a8f16a6397094c8e813e2c505072b5516e928db8e3f5202.html">Microsoftedge, Windows
+                                </a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Purchase two items from Demoblaze
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Given the user is on the homepage<br>When the user adds the "&lt;firstProduct&gt;" to the cart<br>When the user handles the pop-up message<br>When the user returns to the homepage<br>When the user adds the "&lt;secondProduct&gt;" to the cart<br>When the user handles the second pop-up message<br>When the user views the cart<br>When the user clicks the Place Order button<br>When the user completes the purchase form with "&lt;name&gt;", "&lt;country&gt;", "&lt;city&gt;", "&lt;card&gt;", "&lt;month&gt;", "&lt;year&gt;"<br>When the user clicks the Purchase button<br>Then the purchase should be completed successfully</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="8d4b95d9ce955e7e710d2e7cc706b12eed796006db973a8d138b7749db02d5d0.png" title=" 1: Purchase two items from Demoblaze ({firstProduct=Samsung galaxy s6, secondProduct=Nokia lumia 1520, name=John Doe, country=USA, city=New York, card=1234567890, month=12, year=2023})" width="921"/>
+                <img src="8d4b95d9ce955e7e710d2e7cc706b12eed796006db973a8d138b7749db02d5d0.png" title=" Given the user is on the homepage" width="921"/>
+                <img src="8d4b95d9ce955e7e710d2e7cc706b12eed796006db973a8d138b7749db02d5d0.png" title=" User opens the browser at https://www.demoblaze.com/" width="921"/>
+                <img src="8d4b95d9ce955e7e710d2e7cc706b12eed796006db973a8d138b7749db02d5d0.png" title=" Given the user is on the homepage (completed)" width="921"/>
+                <img src="bbe7d3c6642b95f3c67307c65803b5979b68085b46ae6a9552fb24134e7a101d.png" title=" When the user adds the &quot;Samsung galaxy s6&quot; to the cart" width="921"/>
+                <img src="4f7571e82021228008065d3afd9c22857842cff0fb7d2811771bf040d6aa536a.png" title=" User add to cart" width="921"/>
+                <img src="4f7571e82021228008065d3afd9c22857842cff0fb7d2811771bf040d6aa536a.png" title=" User clicks on product link for Samsung galaxy s6" width="921"/>
+                <img src="19a136a388ddeffc15efc56a6a3a874f023bb42ad69ac13f449e31503173877d.png" title=" User clicks on product link for Samsung galaxy s6 (completed)" width="921"/>
+                <img src="19a136a388ddeffc15efc56a6a3a874f023bb42ad69ac13f449e31503173877d.png" title=" User clicks on add to cart button" width="921"/>
+                <img src="401a4583fb674568432c498d9ab10fae65e8791559666b04ac87a044e6420a96.png" title=" User clicks on add to cart button (completed)" width="921"/>
+                <img src="401a4583fb674568432c498d9ab10fae65e8791559666b04ac87a044e6420a96.png" title=" User add to cart (completed)" width="921"/>
+                <img src="401a4583fb674568432c498d9ab10fae65e8791559666b04ac87a044e6420a96.png" title=" When the user adds the &quot;Samsung galaxy s6&quot; to the cart (completed)" width="921"/>
+                <img src="96c035a97ee226b7aedb9893a0cb6c19add09b8735d26993cb17ee4848b63c87.png" title=" When the user handles the pop-up message" width="921"/>
+                <img src="96c035a97ee226b7aedb9893a0cb6c19add09b8735d26993cb17ee4848b63c87.png" title=" User handle popup" width="921"/>
+                <img src="96c035a97ee226b7aedb9893a0cb6c19add09b8735d26993cb17ee4848b63c87.png" title=" When the user handles the pop-up message (completed)" width="921"/>
+                <img src="96c035a97ee226b7aedb9893a0cb6c19add09b8735d26993cb17ee4848b63c87.png" title=" When the user returns to the homepage" width="921"/>
+                <img src="96c035a97ee226b7aedb9893a0cb6c19add09b8735d26993cb17ee4848b63c87.png" title=" User clicks on Home button" width="921"/>
+                <img src="8d4b95d9ce955e7e710d2e7cc706b12eed796006db973a8d138b7749db02d5d0.png" title=" User clicks on Home button (completed)" width="921"/>
+                <img src="8d4b95d9ce955e7e710d2e7cc706b12eed796006db973a8d138b7749db02d5d0.png" title=" When the user returns to the homepage (completed)" width="921"/>
+                <img src="8d4b95d9ce955e7e710d2e7cc706b12eed796006db973a8d138b7749db02d5d0.png" title=" When the user adds the &quot;Nokia lumia 1520&quot; to the cart" width="921"/>
+                <img src="4f7571e82021228008065d3afd9c22857842cff0fb7d2811771bf040d6aa536a.png" title=" User add to cart" width="921"/>
+                <img src="4f7571e82021228008065d3afd9c22857842cff0fb7d2811771bf040d6aa536a.png" title=" User clicks on product link for Nokia lumia 1520" width="921"/>
+                <img src="19a136a388ddeffc15efc56a6a3a874f023bb42ad69ac13f449e31503173877d.png" title=" User clicks on product link for Nokia lumia 1520 (completed)" width="921"/>
+                <img src="19a136a388ddeffc15efc56a6a3a874f023bb42ad69ac13f449e31503173877d.png" title=" User clicks on add to cart button" width="921"/>
+                <img src="e07c12a7a933d42b153d06a8f214ea7feb828dedf4d2249898d275a97f7c143f.png" title=" User clicks on add to cart button (completed)" width="921"/>
+                <img src="e07c12a7a933d42b153d06a8f214ea7feb828dedf4d2249898d275a97f7c143f.png" title=" User add to cart (completed)" width="921"/>
+                <img src="e07c12a7a933d42b153d06a8f214ea7feb828dedf4d2249898d275a97f7c143f.png" title=" When the user adds the &quot;Nokia lumia 1520&quot; to the cart (completed)" width="921"/>
+                <img src="e07c12a7a933d42b153d06a8f214ea7feb828dedf4d2249898d275a97f7c143f.png" title=" When the user handles the second pop-up message" width="921"/>
+                <img src="a93911deb72418399eb65eda28ea91e5295426720888c53c60090bbdbf6cc75d.png" title=" User handle popup" width="921"/>
+                <img src="a93911deb72418399eb65eda28ea91e5295426720888c53c60090bbdbf6cc75d.png" title=" When the user handles the second pop-up message (completed)" width="921"/>
+                <img src="a93911deb72418399eb65eda28ea91e5295426720888c53c60090bbdbf6cc75d.png" title=" When the user views the cart" width="921"/>
+                <img src="a93911deb72418399eb65eda28ea91e5295426720888c53c60090bbdbf6cc75d.png" title=" User clicks on cart button" width="921"/>
+                <img src="607c464c8772f29c56590bb8205dae47608e6c46d4a47b3e643f116425073db1.png" title=" User clicks on cart button (completed)" width="921"/>
+                <img src="607c464c8772f29c56590bb8205dae47608e6c46d4a47b3e643f116425073db1.png" title=" When the user views the cart (completed)" width="921"/>
+                <img src="607c464c8772f29c56590bb8205dae47608e6c46d4a47b3e643f116425073db1.png" title=" When the user clicks the Place Order button" width="921"/>
+                <img src="607c464c8772f29c56590bb8205dae47608e6c46d4a47b3e643f116425073db1.png" title=" User clicks on place order button" width="921"/>
+                <img src="5e2c7dc08fea7920386221cebb6513ce1fa6a2187a8fec4eee39eb6b42a8cc97.png" title=" User clicks on place order button (completed)" width="921"/>
+                <img src="5e2c7dc08fea7920386221cebb6513ce1fa6a2187a8fec4eee39eb6b42a8cc97.png" title=" When the user clicks the Place Order button (completed)" width="921"/>
+                <img src="5e2c7dc08fea7920386221cebb6513ce1fa6a2187a8fec4eee39eb6b42a8cc97.png" title=" When the user completes the purchase form with &quot;John Doe&quot;, &quot;USA&quot;, &quot;New York&quot;, &quot;1234567890&quot;, &quot;12&quot;, &quot;2023&quot;" width="921"/>
+                <img src="1f6c66a24df29f5d3a3023d1c337ef6f2345328f61b896761060a9de708b7715.png" title=" User complete purchase form" width="921"/>
+                <img src="c9b0e5f912cbe9a2a792a783b6f379e25aebb003c671743effd32d88979836f9.png" title=" User enters 'John Doe' into name field" width="921"/>
+                <img src="3c4c32a117e395078d149f76281aa8528afd93c89735d8d4860d9a66c24877af.png" title=" User enters 'John Doe' into name field (completed)" width="921"/>
+                <img src="3c4c32a117e395078d149f76281aa8528afd93c89735d8d4860d9a66c24877af.png" title=" User enters 'USA' into country field" width="921"/>
+                <img src="e65534cb31a1e9abc92221a3f4d345fa773e4bf3287f1f41570127f859642317.png" title=" User enters 'USA' into country field (completed)" width="921"/>
+                <img src="e65534cb31a1e9abc92221a3f4d345fa773e4bf3287f1f41570127f859642317.png" title=" User enters 'New York' into city field" width="921"/>
+                <img src="0ec348f17cc12a2b9733b85ed5e86648a5645de2d56eaa2376ccf1b3e56d3d69.png" title=" User enters 'New York' into city field (completed)" width="921"/>
+                <img src="0ec348f17cc12a2b9733b85ed5e86648a5645de2d56eaa2376ccf1b3e56d3d69.png" title=" User enters '1234567890' into credit card field" width="921"/>
+                <img src="f083c82a8492614d9c57d618b6409a8d6b8eb26c249afe4d31c4258139f6d187.png" title=" User enters '1234567890' into credit card field (completed)" width="921"/>
+                <img src="f083c82a8492614d9c57d618b6409a8d6b8eb26c249afe4d31c4258139f6d187.png" title=" User enters '12' into month field" width="921"/>
+                <img src="4d2f6a1c21169a45bcc5ca3a0d4b923fd1e1851696b9a1c01920ae9d4ad0ac41.png" title=" User enters '12' into month field (completed)" width="921"/>
+                <img src="4d2f6a1c21169a45bcc5ca3a0d4b923fd1e1851696b9a1c01920ae9d4ad0ac41.png" title=" User enters '2023' into year field" width="921"/>
+                <img src="0e6ffce1b90f743e39e27f507e96cb93da23e79ddf41185f5af35e046aba3d65.png" title=" User enters '2023' into year field (completed)" width="921"/>
+                <img src="0e6ffce1b90f743e39e27f507e96cb93da23e79ddf41185f5af35e046aba3d65.png" title=" User complete purchase form (completed)" width="921"/>
+                <img src="0e6ffce1b90f743e39e27f507e96cb93da23e79ddf41185f5af35e046aba3d65.png" title=" When the user completes the purchase form with &quot;John Doe&quot;, &quot;USA&quot;, &quot;New York&quot;, &quot;1234567890&quot;, &quot;12&quot;, &quot;2023&quot; (completed)" width="921"/>
+                <img src="0e6ffce1b90f743e39e27f507e96cb93da23e79ddf41185f5af35e046aba3d65.png" title=" When the user clicks the Purchase button" width="921"/>
+                <img src="36d75f52f5d044789c65f94f5ec8e39fe4297a3fdee71dd97a2048bfe9cfe076.png" title=" User clicks on purchase button" width="921"/>
+                <img src="cc288a1b471d199971dba5757bebd70b84224746c8520e83b89cb4279944152e.png" title=" User clicks on purchase button (completed)" width="921"/>
+                <img src="cc288a1b471d199971dba5757bebd70b84224746c8520e83b89cb4279944152e.png" title=" When the user clicks the Purchase button (completed)" width="921"/>
+                <img src="cc288a1b471d199971dba5757bebd70b84224746c8520e83b89cb4279944152e.png" title=" Then the purchase should be completed successfully" width="921"/>
+                <img src="a7cd2071158359b7e1d11947444b6db483738589adb5deda452b01f44a57cd4a.png" title=" Then Purchase confirmation should be an element that is visible" width="921"/>
+                <img src="96ee3d69aa976c73f7460a89c42f0d78c57f5d22072d2629ea11900d94b7498f.png" title=" Then Purchase confirmation should be an element that is visible (completed)" width="921"/>
+                <img src="96ee3d69aa976c73f7460a89c42f0d78c57f5d22072d2629ea11900d94b7498f.png" title=" Then the purchase should be completed successfully (completed)" width="921"/>
+                <img src="96ee3d69aa976c73f7460a89c42f0d78c57f5d22072d2629ea11900d94b7498f.png" title=" 1: Purchase two items from Demoblaze ({firstProduct=Samsung galaxy s6, secondProduct=Nokia lumia 1520, name=John Doe, country=USA, city=New York, card=1234567890, month=12, year=2023}) (completed): <span class='success-color'>SUCCESS</span>" width="921"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 3.6.23</span>
+</div>
+</body>
+</html>
